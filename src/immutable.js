@@ -5,9 +5,12 @@ import { ethers } from "ethers";
 const passportConfig = {
   clientId: import.meta.env.VITE_IMMUTABLE_CLIENT_ID ?? "YOUR_CLIENT_ID",
   redirectUri: `${
-    import.meta.env.VITE_BASE_URL ?? "http://localhost:5003"
+    import.meta.env.VITE_BASE_URL ??
+    "https://fluffy-space-xylophone-v96q7w5g44936wvw-5003.app.github.dev/"
   }/callback`,
-  logoutRedirectUri: import.meta.env.VITE_BASE_URL ?? "http://localhost:5003",
+  logoutRedirectUri:
+    import.meta.env.VITE_BASE_URL ??
+    "https://fluffy-space-xylophone-v96q7w5g44936wvw-5003.app.github.dev/",
   scope: "transact openid offline_access email",
   audience: "platform_api",
   baseConfig: new config.ImmutableConfiguration({
